@@ -1,0 +1,87 @@
+Private Sub Timer1_Timer()
+Dim a, b As Integer
+a = 1
+b = 9
+If a < b Then
+a = a + 1
+txt_kirim = "00RR" + txt_addrd + "0001"
+Sending
+txt_valrd = Mid(Txt_terima, 8, 4)
+txt_kirim = "00RR" + Text1 + "0001"
+Sending
+Text2 = Mid(Txt_terima, 8, 4)
+'txt_kirim = "00RR" + Text1 + "0001"
+'Sending
+'Text2 = Mid(Text3, 8, 4)
+ElseIf a > b Then
+a = 0
+End If
+'RUNG blok1
+    If txt_valrd.Text = "0001" Or txt_valrd.Text = "0003" Then
+        Shape1.FillColor = &HE0E0E0
+        Shape4.FillColor = &HFF&
+        Shape7.FillColor = &HFF&
+        'Shape10.FillColor = &HFF&
+        Shape3.FillColor = &HFF00&
+    
+'RUNG blok2
+    ElseIf txt_valrd.Text = "0044" Or txt_valrd.Text = "00C4" Then
+        Shape1.FillColor = &HFF&
+        Shape4.FillColor = &HE0E0E0
+        Shape7.FillColor = &HFF&
+        'Shape10.FillColor = &HFF&
+        Shape6.FillColor = &HFF00&
+        
+'RUNG blok3
+    ElseIf Text2.Text = "0003" Or Text2.Text = "0007" Then
+        Shape1.FillColor = &HFF&
+        Shape4.FillColor = &HFF&
+        Shape7.FillColor = &HE0E0E0
+        'Shape10.FillColor = &HFF&
+        Shape9.FillColor = &HFF00&
+    
+'RUNG blok4
+    'ElseIf txt_valrd.Text = "0078" Then
+     '   Shape1.FillColor = &HFF&
+      '  Shape4.FillColor = &HFF&
+       ' Shape7.FillColor = &HFF&
+        'Shape10.FillColor = &HE0E0E0
+        'Shape12.FillColor = &HFF00&
+    ElseIf Text2.Text = "0009" And txt_valrd.Text = "0004" Then
+        Shape1.FillColor = &HFF&
+        Shape4.FillColor = &HFF&
+        Shape7.FillColor = &HFF&
+        Shape3.FillColor = &HE0E0E0
+        Shape6.FillColor = &HE0E0E0
+        Shape9.FillColor = &HE0E0E0
+    Else
+        Shape1.FillColor = &HE0E0E0
+        Shape4.FillColor = &HE0E0E0
+        Shape7.FillColor = &HE0E0E0
+        'Shape10.FillColor = &HFF&
+        Shape3.FillColor = &HE0E0E0
+        Shape6.FillColor = &HE0E0E0
+        Shape9.FillColor = &HE0E0E0
+        'Shape12.FillColor = &HE0E0E0
+    End If
+    'kode kuning
+    If txt_valrd = "0003" Then
+        Shape2.FillColor = &HFFFF&
+    ElseIf txt_valrd = "00C4" Then
+        Shape5.FillColor = &HFFFF&
+    ElseIf Text2.Text = "0007" Then
+        Shape8.FillColor = &HFFFF&
+    'ElseIf Text2.Text = "0008" Then
+    '    Shape11.FillColor = &HFFFF&
+    ElseIf Text2.Text = "0004" And txt_valrd = "0082" Then
+        Shape2.FillColor = &HFFFF&
+        Shape5.FillColor = &HFFFF&
+        Shape8.FillColor = &HFFFF&
+    Else
+        Shape2.FillColor = &HE0E0E0
+        Shape5.FillColor = &HE0E0E0
+        Shape8.FillColor = &HE0E0E0
+        'Shape11.FillColor = &HE0E0E0
+    End If
+        
+End Sub

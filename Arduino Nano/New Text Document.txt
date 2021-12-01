@@ -1,0 +1,8 @@
+KOMPONEN:
+1.GPS Module
+2.Arduino Nano
+3.SIM800L 
+4.2G SIM card 
+5.OLED Display
+6.Small 3V battery 
+7.Wires 

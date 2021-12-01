@@ -1,0 +1,8 @@
+Cara instalasi libraries diatas :
+
+ Download libraries
+    Buka Arduino IDE
+    Pilih sketch > include library > add. ZIP library
+    pilihlah file Library Tinygps++ > open
+    Jika sudah ada tulisan “Library added to your libraries“
+    Pastikan dengan File > Examples > TinyGPS++

@@ -1,0 +1,17 @@
+AT+SAPBR=3,1,"CONTYPE","GPRS"
+AT+SAPBR=3,1,"APN","internet"
+
+AT+SAPBR=1,1
+AT+HTTPINIT
+
+AT+HTTPPARA="URL","http://tytomulyono.com/test.php"
+
+// set http action type 0 = GET, 1 = POST, 2 = HEAD
+AT+HTTPACTION=0
+AT+HTTPREAD
+AT+HTTPTERM
+AT+SAPBR=0,1
+
+
+
+
